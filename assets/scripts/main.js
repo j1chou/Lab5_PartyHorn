@@ -9,7 +9,9 @@ var button = document.getElementById("honk-btn");
 
 button.addEventListener("click", function(event) {
     event.preventDefault();
-    document.getElementById("horn-sound").play();
+    var deciVol = volumeLevel.value/100;
+    horn.volume = (deciVol);
+    horn.play();
 });
 
 airHorn.addEventListener("click", function(){
